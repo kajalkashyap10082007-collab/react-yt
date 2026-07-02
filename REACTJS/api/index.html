@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="parent" style="display: flex; align-items: center; justify-content: space-around; flex-direction: column"></div>
+   <script>
+    function display(data){
+      const parent=document.getElementById('parent');
+      for(let i=0;i<data.length;i++){
+        const{title,thumbnail,description}=data[i];
+        const closetParent=document.createElement('div');
+        const image=document.createElement('img');
+        image.src=thumbnail;
+        const h4=document.createElement('h4');
+        h4.textContent=title;
+        const p=document.createElement('p');
+        p.textContent=description;
+        closetParent.appendChild(image);
+        closetParent.appendChild(h4);
+        closetParent.appendChild(p);
+        parent.appendChild(closetParent);
+      }
+    }
+    async function getData(){
+        try{
+            // console.log("API calling...");
+            const response=await fetch("https://dummyjson.com/products");
+            const result=await response.json();
+            // console.log(result);
+            display(result.products);
+        }
+        catch(error){
+            console.log(error);
+        }
+    }
+    getData();
+    console.log('End!');
+   </script> 
+</body>
+</html>

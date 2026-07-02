@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="parent" style="display:flex; flex-wrap: wrap; align-items: center;justify-content: space-around;flex-direction: row;"></div>
+   <script>
+
+    function display(data){
+        const parent=document.getElementById('parent');
+        for(let i=0;i<data.length;i++){
+
+            const {firstName,lastName,image,gender,height,weight,city,state,country,address,phone}=data[i];
+            const closetParent=document.createElement('div');
+            closetParent.style.border="3px solid grey";
+            closetParent.style.height="500px";
+            closetParent.style.width="400px"
+            closetParent.style.padding="40px";
+            const photo=document.createElement('img');
+            photo.src=image;
+            const fname=document.createElement('h1');
+            fname.textContent=`${firstName} ${lastName}`;
+            const lname=document.createElement('h1');
+            const gen=document.createElement('h2');
+            gen.textContent="Gender:"+gender;
+            const h=document.createElement('h2');
+            h.textContent="Height"+height;
+            const w=document.createElement('h3');
+            w.textContent="Weight"+weight;
+            const add=document.createElement('h4');
+            add.textContent="City"+address.city;
+            const place=document.createElement('h4');
+            place.textContent="State"+address.state;
+            const loc=document.createElement('h4');
+            loc.textContent="Country"+address.country;
+            const ph=document.createElement('p');
+            ph.textContent="Phone"+phone;
+
+            closetParent.appendChild(photo);
+            closetParent.appendChild(fname);
+            closetParent.appendChild(lname);
+            closetParent.appendChild(gen);
+            closetParent.appendChild(h);
+            closetParent.appendChild(w);
+            closetParent.appendChild(add);
+            closetParent.appendChild(place);
+            closetParent.appendChild(loc);
+            closetParent.appendChild(ph);
+            parent.appendChild(closetParent);
+
+        }
+    }
+    async function getData(){
+    try{
+    console.log("API calling...")
+    const response=await fetch("https://dummyjson.com/users");
+    const result=await response.json();
+     console.log(result.users);
+    display(result.users);
+
+    }catch(error){
+        console.log(error);
+    }
+    }
+    getData();
+    console.log('end');
+   </script> 
+</body>
+</html>

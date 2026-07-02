@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Discussion Portal</h1>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+
+        <!-- Left Section -->
+        <div class="left-panel">
+
+            <div class="top-controls">
+                <button class="new-question-btn">
+                    New Question form
+                </button>
+
+                <input
+                    type="text"
+                    class="search-box"
+                    placeholder="search questions..."
+                >
+            </div>
+
+            <div class="question-list">
+                <!-- Questions will appear here -->
+            </div>
+
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-panel">
+
+            <h1 class="welcome-heading">
+                Welcome to Discussion Portal !
+            </h1>
+
+            <p class="welcome-text">
+                Enter a subject and question to get started
+            </p>
+
+            <form class="question-form">
+
+                <input
+                    type="text"
+                    class="subject-input"
+                    placeholder="Subject"
+                >
+
+                <textarea
+                    class="question-input"
+                    placeholder="Question"
+                ></textarea>
+
+                <button type="submit" class="submitbtn">
+                    Submit
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

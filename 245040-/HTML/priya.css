@@ -1,0 +1,54 @@
+.idcard{
+    height: auto;
+    width: 25%;
+    border-left: 1px solid #000;
+    margin-left: 30%;
+    border-right: 1px solid #000;
+    border-top: 12px solid red;
+    border-bottom: 12px solid red;
+    margin-top: 5%;
+    border-radius: 8px;
+
+}
+    
+#m1{
+    color: red;
+    margin-left: 40%;
+    font-size: 45px;
+    margin-bottom: 0%;
+}
+.logo{
+    height: 80px;
+    width: 125%;
+    margin-left: 30%;
+    
+}
+#m2{
+    margin-left: 30%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+
+}
+#pic{
+    height: 125px;
+    width: 35%;
+    border: 1px solid black;
+    border: radius 5px;
+    margin-left: 30%;
+    margin-top: 0%;
+}
+#n1{
+    margin-left: 34%;
+    color: red;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+#bca{
+    margin-left: 15%;
+    color: rgb(104, 104, 185);
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+#rn{
+   
+
